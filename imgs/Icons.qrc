@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="Main">
+    <file>Auburn_logo.jpg</file>
+  </qresource>
+  <qresource prefix="Buttons">
+    <file>python-logo-only.png</file>
+    <file>close.png</file>
+    <file>maximize.png</file>
+    <file>minus-button.png</file>
+    <file>analytics (1).png</file>
+    <file>line-chart.png</file>
+    <file>pie-chart.png</file>
+    <file>hot.png</file>
+    <file>analytics.png</file>
+    <file>analysis.png</file>
+    <file>menu.png</file>
+  </qresource>
+</RCC>
