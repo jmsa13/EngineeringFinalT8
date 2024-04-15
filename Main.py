@@ -20,6 +20,8 @@ class MainWindow(QMainWindow):
         # move window by clicking on the title bar, calls move_window function to initiate
         self.ui.title_bar.mouseMoveEvent = self.mouseMoveEvent = self.move_window
 
+        self.initialize_buttons()  # initializes all buttons in the GUI to be used
+
     # Function will check if maximized and if not, will wait for left click to move the window from the click_position
     def move_window(self, e):
         if not (self.isMaximized()):
@@ -32,88 +34,89 @@ class MainWindow(QMainWindow):
     def mousePressEvent(self, event):
         self.click_position = event.globalPos()
 
-    # function for the 3 minimize/maximize and close buttons
-    def header_buttons_style(self):
-        # exit button
-        self.ui.close_window_button.clicked.connect(self.close)
+    """
+    Function initialize_buttons() is the most important function,
+    it initializes the buttons in a dictionary with values corresponding
+    to their function; it also executes a for loop to set the buttons check-able
+    and to wait for a click signal to execute the action of the value desired.    
+    """
+    def initialize_buttons(self):
+        buttons_actions = {
+            self.ui.restore_window_button: self.toggle_window,
+            self.ui.minimize_window_button: self.minimize_window,
+            self.ui.close_window_button: self.close,
+            self.ui.percent_bar_chart_button: lambda: self.change_widget(0),
+            self.ui.temperature_chart_button: lambda: self.change_widget(1),
+            self.ui.nested_donuts_button: lambda: self.change_widget(2),
+            self.ui.line_chart_button: lambda: self.change_widget(3),
+            self.ui.bar_chart_button: lambda: self.change_widget(4),
+            self.ui.menu_button: self.toggle_menu
+        }
 
-        # restore button for the window to minimize/maximize the window
-        self.ui.restore_window_button.setCheckable(True)
-        self.ui.restore_window_button.clicked.connect(self.buttons_connected)
+        for button, action in buttons_actions.items():
+            button.setCheckable(True)
+            button.clicked.connect(action)
 
-        # minimize window button
-        self.ui.minimize_window_button.setCheckable(True)
-        self.ui.minimize_window_button.clicked.connect(self.buttons_connected)
-
-    def menu_buttons_style(self):
-        # calls the menu buttons function to change the widget to the button clicked
-        self.ui.percent_bar_chart_button.setCheckable(True)
-        self.ui.percent_bar_chart_button.clicked.connect(self.menu_buttons)
-
-        self.ui.temperature_chart_button.setCheckable(True)
-        self.ui.temperature_chart_button.clicked.connect(self.menu_buttons)
-
-        self.ui.nested_donuts_button.setCheckable(True)
-        self.ui.nested_donuts_button.clicked.connect(self.menu_buttons)
-
-        self.ui.line_chart_button.setCheckable(True)
-        self.ui.line_chart_button.clicked.connect(self.menu_buttons)
-
-        self.ui.bar_chart_button.setCheckable(True)
-        self.ui.bar_chart_button.clicked.connect(self.menu_buttons)
-
-        self.ui.menu_button.setCheckable(True)
-        self.ui.menu_button.clicked.connect(self.menu_buttons)
-
-    # determines if the buttons have been clicked to initiate the required closing or opening/minimizing of the window
-    def buttons_connected(self):
-        # will maximize the window or minimize when clicked
+    """
+    Function toggle_window checks the maximize/minimize window button,
+    it will change the size of the GUI to fit the screen or return to
+    the default size based on the status of the check boolean.
+    """
+    def toggle_window(self):
         if self.ui.restore_window_button.isChecked():
             self.showMaximized()
+            if self.ui.restore_window_button.isMaximized():  # if it is already maximized, return to normal state
+                self.showNormal()
         else:
             self.showNormal()
+            self.ui.restore_window_button.setChecked(False)
 
-        # will minimize the window then reset the button to false
-        if self.ui.minimize_window_button.isChecked():
-            self.showMinimized()
-            self.ui.minimize_window_button.setChecked(False)
+    """
+    Function minimize_window simply hides the whole GUI, 
+    just need to click on the app icon again to bring it up
+    """
+    def minimize_window(self):
+        self.showMinimized()
+        self.ui.minimize_window_button.setChecked(False)
 
-    # will change the widgets based on the button clicked in the menu then resets the check
-    def menu_buttons(self):
-        # this will hide the menu when the menu button is clicked and show when it is hidden
-        if self.ui.menu_button.isChecked():
-            if not (self.ui.left_menu_widget.isHidden()):
-                self.ui.left_menu_widget.hide()
-            else:
-                self.ui.left_menu_widget.show()
-            self.ui.menu_button.setChecked(False)
+    """
+    Function toggle_menu() is called when the menu button is clicked, 
+    it sends the signal to show or hide the menu depending on
+    the state of the menu when clicked.
+    """
+    def toggle_menu(self):
+        if not self.ui.left_menu_widget.isHidden():
+            self.ui.left_menu_widget.hide()
+        else:
+            self.ui.left_menu_widget.show()
+        self.ui.menu_button.setChecked(False)
 
-        # these if statements will change the stacked widget to show what button is clicked in the menu
-        if self.ui.percent_bar_chart_button.isChecked():
-            self.ui.stackedWidget.setCurrentIndex(0)
-            self.ui.percent_bar_chart_button.setChecked(False)
+    """
+    Function change_widget() takes the index of the widget and sets it to the current index
+    of the page shown in the menu.
+        - when clicked, the widget calls change_widget and sends the index as a parameter.
+            the function then changes all buttons to false after the designated widget is 
+            shown after this function is called.
+    """
+    def change_widget(self, index):
+        self.ui.stackedWidget.setCurrentIndex(index)
 
-        if self.ui.temperature_chart_button.isChecked():
-            self.ui.stackedWidget.setCurrentIndex(1)
-            self.ui.temperature_chart_button.setChecked(False)
+        # Reset all the chart buttons to unchecked
+        chart_buttons = [
+            self.ui.percent_bar_chart_button,
+            self.ui.temperature_chart_button,
+            self.ui.nested_donuts_button,
+            self.ui.line_chart_button,
+            self.ui.bar_chart_button
+        ]
 
-        if self.ui.nested_donuts_button.isChecked():
-            self.ui.stackedWidget.setCurrentIndex(2)
-            self.ui.nested_donuts_button.setChecked(False)
-
-        if self.ui.line_chart_button.isChecked():
-            self.ui.stackedWidget.setCurrentIndex(3)
-            self.ui.line_chart_button.setChecked(False)
-
-        if self.ui.bar_chart_button.isChecked():
-            self.ui.stackedWidget.setCurrentIndex(4)
-            self.ui.bar_chart_button.setChecked(False)
+        # goes through buttons in the list to set too false to change the index of the tab when clicked again
+        for button in chart_buttons:
+            button.setChecked(False)
 
 
 if __name__ == "__main__":
     executable = QApplication(sys.argv)
     window = MainWindow()
-    window.header_buttons_style()
-    window.menu_buttons_style()
     window.show()
-    executable.exec()
+    sys.exit(executable.exec())
