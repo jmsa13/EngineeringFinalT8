@@ -1,12 +1,3 @@
-# -*- coding: utf-8 -*-
-
-################################################################################
-## Form generated from reading UI file 'interfaceOhdFFO.ui'
-##
-## Created by: Qt User Interface Compiler version 6.6.1
-##
-## WARNING! All changes made in this file will be lost when recompiling UI file!
-################################################################################
 
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
@@ -24,8 +15,16 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(773, 511)
+        MainWindow.resize(832, 511)
+        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
+        MainWindow.setSizePolicy(sizePolicy)
         MainWindow.setMaximumSize(QSize(16777215, 16777215))
+        icon = QIcon()
+        icon.addFile(u":/Main/Auburn_logo.jpg", QSize(), QIcon.Normal, QIcon.Off)
+        MainWindow.setWindowIcon(icon)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidget.setStyleSheet(u"@font-face{\n"
@@ -44,8 +43,8 @@ class Ui_MainWindow(object):
 "	background-color: rgb(45, 46, 76);\n"
 "}\n"
 "\n"
-"left_menu_widget, #percentage_bar_chart, #nested_donuts, \n"
-"#line_charts, #bar_charts, #temperature_bar_chart, #stackedWidget QFrame\n"
+"left_menu_widget, #major_company_cloud_breaches, #us_major_cloud_breaches, \n"
+"#russian_major_cloud_breaches, #china_major_cloud_breaches, #uk_major_cloud_breaches, #stackedWidget QFrame\n"
 "{\n"
 "background-color: rgb(50, 68, 85);\n"
 "}\n"
@@ -66,6 +65,15 @@ class Ui_MainWindow(object):
 "#header_nav QPushButton:hover{\n"
 "background-color: rgb(120, 157, 186);\n"
 "}\n"
+"\n"
+"#left_menu_widget QPushButton:hover{\n"
+"background-color:rgb(120, 157, 186);"
+                        "\n"
+"}\n"
+"\n"
+"#header_menu_nav QPushButton:hover{\n"
+"background-color:rgb(120, 157, 186);\n"
+"}\n"
 "")
         self.horizontalLayout = QHBoxLayout(self.centralwidget)
         self.horizontalLayout.setSpacing(0)
@@ -73,11 +81,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.left_menu_widget = QWidget(self.centralwidget)
         self.left_menu_widget.setObjectName(u"left_menu_widget")
-        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.left_menu_widget.sizePolicy().hasHeightForWidth())
-        self.left_menu_widget.setSizePolicy(sizePolicy)
+        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.left_menu_widget.sizePolicy().hasHeightForWidth())
+        self.left_menu_widget.setSizePolicy(sizePolicy1)
         self.left_menu_widget.setMinimumSize(QSize(0, 0))
         self.left_menu_widget.setMaximumSize(QSize(16777215, 11677215))
         self.left_menu_widget.setStyleSheet(u"#left_menu_widget{\n"
@@ -89,11 +97,8 @@ class Ui_MainWindow(object):
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.frame_6 = QFrame(self.left_menu_widget)
         self.frame_6.setObjectName(u"frame_6")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
-        sizePolicy1.setHorizontalStretch(0)
-        sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.frame_6.sizePolicy().hasHeightForWidth())
-        self.frame_6.setSizePolicy(sizePolicy1)
+        sizePolicy.setHeightForWidth(self.frame_6.sizePolicy().hasHeightForWidth())
+        self.frame_6.setSizePolicy(sizePolicy)
         self.frame_6.setMinimumSize(QSize(0, 52))
         self.frame_6.setMaximumSize(QSize(16777215, 41))
         self.frame_6.setStyleSheet(u"#frame_6, #label, #label_15{\n"
@@ -107,8 +112,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.setContentsMargins(6, 0, 0, 0)
         self.label_15 = QLabel(self.frame_6)
         self.label_15.setObjectName(u"label_15")
-        sizePolicy1.setHeightForWidth(self.label_15.sizePolicy().hasHeightForWidth())
-        self.label_15.setSizePolicy(sizePolicy1)
+        sizePolicy.setHeightForWidth(self.label_15.sizePolicy().hasHeightForWidth())
+        self.label_15.setSizePolicy(sizePolicy)
         self.label_15.setMinimumSize(QSize(36, 36))
         self.label_15.setMaximumSize(QSize(36, 36))
         self.label_15.setPixmap(QPixmap(u":/Buttons/analysis.png"))
@@ -118,8 +123,8 @@ class Ui_MainWindow(object):
 
         self.label = QLabel(self.frame_6)
         self.label.setObjectName(u"label")
-        sizePolicy1.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
-        self.label.setSizePolicy(sizePolicy1)
+        sizePolicy.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
+        self.label.setSizePolicy(sizePolicy)
         self.label.setMaximumSize(QSize(16777215, 40))
 
         self.horizontalLayout_2.addWidget(self.label)
@@ -129,8 +134,8 @@ class Ui_MainWindow(object):
 
         self.frame_3 = QFrame(self.left_menu_widget)
         self.frame_3.setObjectName(u"frame_3")
-        sizePolicy.setHeightForWidth(self.frame_3.sizePolicy().hasHeightForWidth())
-        self.frame_3.setSizePolicy(sizePolicy)
+        sizePolicy1.setHeightForWidth(self.frame_3.sizePolicy().hasHeightForWidth())
+        self.frame_3.setSizePolicy(sizePolicy1)
         self.frame_3.setMinimumSize(QSize(0, 306))
         self.frame_3.setMaximumSize(QSize(16777215, 16777215))
         self.frame_3.setStyleSheet(u"#frame_3{\n"
@@ -142,76 +147,77 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(-1, 0, -1, 0)
-        self.percent_bar_chart_button = QPushButton(self.frame_3)
-        self.percent_bar_chart_button.setObjectName(u"percent_bar_chart_button")
+        self.company_cloud_breaches_button = QPushButton(self.frame_3)
+        self.company_cloud_breaches_button.setObjectName(u"company_cloud_breaches_button")
+        self.company_cloud_breaches_button.setEnabled(True)
         sizePolicy2 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Preferred)
         sizePolicy2.setHorizontalStretch(0)
         sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(self.percent_bar_chart_button.sizePolicy().hasHeightForWidth())
-        self.percent_bar_chart_button.setSizePolicy(sizePolicy2)
-        self.percent_bar_chart_button.setMaximumSize(QSize(200, 33))
-        self.percent_bar_chart_button.setStyleSheet(u"")
-        icon = QIcon()
-        icon.addFile(u":/Buttons/analytics.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.percent_bar_chart_button.setIcon(icon)
-        self.percent_bar_chart_button.setIconSize(QSize(23, 23))
-
-        self.verticalLayout_2.addWidget(self.percent_bar_chart_button)
-
-        self.temperature_chart_button = QPushButton(self.frame_3)
-        self.temperature_chart_button.setObjectName(u"temperature_chart_button")
-        sizePolicy2.setHeightForWidth(self.temperature_chart_button.sizePolicy().hasHeightForWidth())
-        self.temperature_chart_button.setSizePolicy(sizePolicy2)
-        self.temperature_chart_button.setMaximumSize(QSize(16777215, 33))
+        sizePolicy2.setHeightForWidth(self.company_cloud_breaches_button.sizePolicy().hasHeightForWidth())
+        self.company_cloud_breaches_button.setSizePolicy(sizePolicy2)
+        self.company_cloud_breaches_button.setMaximumSize(QSize(16777215, 33))
+        self.company_cloud_breaches_button.setStyleSheet(u"")
         icon1 = QIcon()
-        icon1.addFile(u":/Buttons/hot.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.temperature_chart_button.setIcon(icon1)
-        self.temperature_chart_button.setIconSize(QSize(23, 23))
+        icon1.addFile(u":/Buttons/analytics.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.company_cloud_breaches_button.setIcon(icon1)
+        self.company_cloud_breaches_button.setIconSize(QSize(23, 23))
 
-        self.verticalLayout_2.addWidget(self.temperature_chart_button)
+        self.verticalLayout_2.addWidget(self.company_cloud_breaches_button)
 
-        self.nested_donuts_button = QPushButton(self.frame_3)
-        self.nested_donuts_button.setObjectName(u"nested_donuts_button")
-        sizePolicy2.setHeightForWidth(self.nested_donuts_button.sizePolicy().hasHeightForWidth())
-        self.nested_donuts_button.setSizePolicy(sizePolicy2)
-        self.nested_donuts_button.setMaximumSize(QSize(16777215, 33))
+        self.us_cloud_breaches_button = QPushButton(self.frame_3)
+        self.us_cloud_breaches_button.setObjectName(u"us_cloud_breaches_button")
+        sizePolicy2.setHeightForWidth(self.us_cloud_breaches_button.sizePolicy().hasHeightForWidth())
+        self.us_cloud_breaches_button.setSizePolicy(sizePolicy2)
+        self.us_cloud_breaches_button.setMaximumSize(QSize(16777215, 33))
         icon2 = QIcon()
-        icon2.addFile(u":/Buttons/pie-chart.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.nested_donuts_button.setIcon(icon2)
-        self.nested_donuts_button.setIconSize(QSize(23, 23))
+        icon2.addFile(u":/Buttons/hot.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.us_cloud_breaches_button.setIcon(icon2)
+        self.us_cloud_breaches_button.setIconSize(QSize(23, 23))
 
-        self.verticalLayout_2.addWidget(self.nested_donuts_button)
+        self.verticalLayout_2.addWidget(self.us_cloud_breaches_button)
 
-        self.line_chart_button = QPushButton(self.frame_3)
-        self.line_chart_button.setObjectName(u"line_chart_button")
-        sizePolicy2.setHeightForWidth(self.line_chart_button.sizePolicy().hasHeightForWidth())
-        self.line_chart_button.setSizePolicy(sizePolicy2)
-        self.line_chart_button.setMaximumSize(QSize(16777215, 33))
+        self.russian_cloud_breaches_button = QPushButton(self.frame_3)
+        self.russian_cloud_breaches_button.setObjectName(u"russian_cloud_breaches_button")
+        sizePolicy2.setHeightForWidth(self.russian_cloud_breaches_button.sizePolicy().hasHeightForWidth())
+        self.russian_cloud_breaches_button.setSizePolicy(sizePolicy2)
+        self.russian_cloud_breaches_button.setMaximumSize(QSize(16777215, 33))
         icon3 = QIcon()
-        icon3.addFile(u":/Buttons/line-chart.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.line_chart_button.setIcon(icon3)
-        self.line_chart_button.setIconSize(QSize(23, 23))
+        icon3.addFile(u":/Buttons/pie-chart.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.russian_cloud_breaches_button.setIcon(icon3)
+        self.russian_cloud_breaches_button.setIconSize(QSize(23, 23))
 
-        self.verticalLayout_2.addWidget(self.line_chart_button)
+        self.verticalLayout_2.addWidget(self.russian_cloud_breaches_button)
 
-        self.bar_chart_button = QPushButton(self.frame_3)
-        self.bar_chart_button.setObjectName(u"bar_chart_button")
-        sizePolicy2.setHeightForWidth(self.bar_chart_button.sizePolicy().hasHeightForWidth())
-        self.bar_chart_button.setSizePolicy(sizePolicy2)
-        self.bar_chart_button.setMaximumSize(QSize(16777215, 33))
+        self.china_cloud_breaches_button = QPushButton(self.frame_3)
+        self.china_cloud_breaches_button.setObjectName(u"china_cloud_breaches_button")
+        sizePolicy2.setHeightForWidth(self.china_cloud_breaches_button.sizePolicy().hasHeightForWidth())
+        self.china_cloud_breaches_button.setSizePolicy(sizePolicy2)
+        self.china_cloud_breaches_button.setMaximumSize(QSize(16777215, 33))
         icon4 = QIcon()
-        icon4.addFile(u":/Buttons/analytics (1).png", QSize(), QIcon.Normal, QIcon.Off)
-        self.bar_chart_button.setIcon(icon4)
+        icon4.addFile(u":/Buttons/line-chart.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.china_cloud_breaches_button.setIcon(icon4)
+        self.china_cloud_breaches_button.setIconSize(QSize(23, 23))
 
-        self.verticalLayout_2.addWidget(self.bar_chart_button)
+        self.verticalLayout_2.addWidget(self.china_cloud_breaches_button)
+
+        self.uk_cloud_breaches_button = QPushButton(self.frame_3)
+        self.uk_cloud_breaches_button.setObjectName(u"uk_cloud_breaches_button")
+        sizePolicy2.setHeightForWidth(self.uk_cloud_breaches_button.sizePolicy().hasHeightForWidth())
+        self.uk_cloud_breaches_button.setSizePolicy(sizePolicy2)
+        self.uk_cloud_breaches_button.setMaximumSize(QSize(16777215, 33))
+        icon5 = QIcon()
+        icon5.addFile(u":/Buttons/analytics (1).png", QSize(), QIcon.Normal, QIcon.Off)
+        self.uk_cloud_breaches_button.setIcon(icon5)
+
+        self.verticalLayout_2.addWidget(self.uk_cloud_breaches_button)
 
 
         self.verticalLayout.addWidget(self.frame_3)
 
         self.frame_4 = QFrame(self.left_menu_widget)
         self.frame_4.setObjectName(u"frame_4")
-        sizePolicy.setHeightForWidth(self.frame_4.sizePolicy().hasHeightForWidth())
-        self.frame_4.setSizePolicy(sizePolicy)
+        sizePolicy1.setHeightForWidth(self.frame_4.sizePolicy().hasHeightForWidth())
+        self.frame_4.setSizePolicy(sizePolicy1)
         self.frame_4.setMaximumSize(QSize(16777215, 54))
         self.frame_4.setStyleSheet(u"#frame_4, #label_16, #label_2{\n"
 "	background-color: rgb(54, 66, 147);\n"
@@ -234,8 +240,8 @@ class Ui_MainWindow(object):
 
         self.label_2 = QLabel(self.frame_4)
         self.label_2.setObjectName(u"label_2")
-        sizePolicy.setHeightForWidth(self.label_2.sizePolicy().hasHeightForWidth())
-        self.label_2.setSizePolicy(sizePolicy)
+        sizePolicy1.setHeightForWidth(self.label_2.sizePolicy().hasHeightForWidth())
+        self.label_2.setSizePolicy(sizePolicy1)
         self.label_2.setMaximumSize(QSize(265, 25))
 
         self.horizontalLayout_8.addWidget(self.label_2)
@@ -245,8 +251,8 @@ class Ui_MainWindow(object):
 
         self.frame_5 = QFrame(self.left_menu_widget)
         self.frame_5.setObjectName(u"frame_5")
-        sizePolicy1.setHeightForWidth(self.frame_5.sizePolicy().hasHeightForWidth())
-        self.frame_5.setSizePolicy(sizePolicy1)
+        sizePolicy.setHeightForWidth(self.frame_5.sizePolicy().hasHeightForWidth())
+        self.frame_5.setSizePolicy(sizePolicy)
         self.frame_5.setMaximumSize(QSize(16777215, 16777215))
         self.frame_5.setStyleSheet(u"#frame_5, QLabel{\n"
 "background-color: rgb(50, 68, 85);\n"
@@ -260,30 +266,30 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.setContentsMargins(-1, 4, -1, -1)
         self.label_3 = QLabel(self.frame_5)
         self.label_3.setObjectName(u"label_3")
-        sizePolicy.setHeightForWidth(self.label_3.sizePolicy().hasHeightForWidth())
-        self.label_3.setSizePolicy(sizePolicy)
+        sizePolicy1.setHeightForWidth(self.label_3.sizePolicy().hasHeightForWidth())
+        self.label_3.setSizePolicy(sizePolicy1)
         self.label_3.setMaximumSize(QSize(16777215, 16777215))
 
         self.verticalLayout_3.addWidget(self.label_3)
 
         self.label_6 = QLabel(self.frame_5)
         self.label_6.setObjectName(u"label_6")
-        sizePolicy.setHeightForWidth(self.label_6.sizePolicy().hasHeightForWidth())
-        self.label_6.setSizePolicy(sizePolicy)
+        sizePolicy1.setHeightForWidth(self.label_6.sizePolicy().hasHeightForWidth())
+        self.label_6.setSizePolicy(sizePolicy1)
 
         self.verticalLayout_3.addWidget(self.label_6)
 
         self.label_4 = QLabel(self.frame_5)
         self.label_4.setObjectName(u"label_4")
-        sizePolicy.setHeightForWidth(self.label_4.sizePolicy().hasHeightForWidth())
-        self.label_4.setSizePolicy(sizePolicy)
+        sizePolicy1.setHeightForWidth(self.label_4.sizePolicy().hasHeightForWidth())
+        self.label_4.setSizePolicy(sizePolicy1)
 
         self.verticalLayout_3.addWidget(self.label_4)
 
         self.label_5 = QLabel(self.frame_5)
         self.label_5.setObjectName(u"label_5")
-        sizePolicy.setHeightForWidth(self.label_5.sizePolicy().hasHeightForWidth())
-        self.label_5.setSizePolicy(sizePolicy)
+        sizePolicy1.setHeightForWidth(self.label_5.sizePolicy().hasHeightForWidth())
+        self.label_5.setSizePolicy(sizePolicy1)
 
         self.verticalLayout_3.addWidget(self.label_5)
 
@@ -310,12 +316,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.setContentsMargins(-1, 1, -1, -1)
         self.header_frame = QFrame(self.frame_2)
         self.header_frame.setObjectName(u"header_frame")
-        sizePolicy4 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-        sizePolicy4.setHorizontalStretch(0)
-        sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.header_frame.sizePolicy().hasHeightForWidth())
-        self.header_frame.setSizePolicy(sizePolicy4)
-        self.header_frame.setMinimumSize(QSize(566, 0))
+        sizePolicy3.setHeightForWidth(self.header_frame.sizePolicy().hasHeightForWidth())
+        self.header_frame.setSizePolicy(sizePolicy3)
+        self.header_frame.setMinimumSize(QSize(600, 0))
         self.header_frame.setMaximumSize(QSize(16777215, 232))
         self.header_frame.setStyleSheet(u"#frame_7{\n"
 "background-color: rgb(54, 66, 147);\n"
@@ -332,6 +335,10 @@ class Ui_MainWindow(object):
         self.header_menu_nav.setMaximumSize(QSize(152, 249))
         self.header_menu_nav.setStyleSheet(u"#header_menu_nav, QPushButton{\n"
 "background-color: rgb(54, 66, 147);\n"
+"}\n"
+"\n"
+"#header_menu_nav QPushButton:hover{\n"
+"background-color:rgb(120, 170, 186);\n"
 "}")
         self.header_menu_nav.setFrameShape(QFrame.StyledPanel)
         self.header_menu_nav.setFrameShadow(QFrame.Raised)
@@ -339,13 +346,13 @@ class Ui_MainWindow(object):
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
         self.menu_button = QPushButton(self.header_menu_nav)
         self.menu_button.setObjectName(u"menu_button")
-        sizePolicy.setHeightForWidth(self.menu_button.sizePolicy().hasHeightForWidth())
-        self.menu_button.setSizePolicy(sizePolicy)
+        sizePolicy1.setHeightForWidth(self.menu_button.sizePolicy().hasHeightForWidth())
+        self.menu_button.setSizePolicy(sizePolicy1)
         self.menu_button.setMaximumSize(QSize(28, 127))
         self.menu_button.setStyleSheet(u"")
-        icon5 = QIcon()
-        icon5.addFile(u":/Buttons/menu.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.menu_button.setIcon(icon5)
+        icon6 = QIcon()
+        icon6.addFile(u":/Buttons/menu.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.menu_button.setIcon(icon6)
         self.menu_button.setIconSize(QSize(46, 21))
 
         self.horizontalLayout_4.addWidget(self.menu_button)
@@ -386,8 +393,8 @@ class Ui_MainWindow(object):
 
         self.header_nav = QFrame(self.header_frame)
         self.header_nav.setObjectName(u"header_nav")
-        sizePolicy1.setHeightForWidth(self.header_nav.sizePolicy().hasHeightForWidth())
-        self.header_nav.setSizePolicy(sizePolicy1)
+        sizePolicy.setHeightForWidth(self.header_nav.sizePolicy().hasHeightForWidth())
+        self.header_nav.setSizePolicy(sizePolicy)
         self.header_nav.setMinimumSize(QSize(106, 0))
         self.header_nav.setMaximumSize(QSize(148, 16777215))
         self.header_nav.setStyleSheet(u"#header_nav{\n"
@@ -407,9 +414,9 @@ class Ui_MainWindow(object):
 "background-color: rgb(54, 66, 147);\n"
 "	border-color: rgb(97, 165, 255);\n"
 "}")
-        icon6 = QIcon()
-        icon6.addFile(u":/Buttons/minus-button.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.minimize_window_button.setIcon(icon6)
+        icon7 = QIcon()
+        icon7.addFile(u":/Buttons/minus-button.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.minimize_window_button.setIcon(icon7)
         self.minimize_window_button.setIconSize(QSize(23, 23))
 
         self.horizontalLayout_6.addWidget(self.minimize_window_button)
@@ -417,9 +424,9 @@ class Ui_MainWindow(object):
         self.restore_window_button = QPushButton(self.header_nav)
         self.restore_window_button.setObjectName(u"restore_window_button")
         self.restore_window_button.setMaximumSize(QSize(30, 30))
-        icon7 = QIcon()
-        icon7.addFile(u":/Buttons/maximize.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.restore_window_button.setIcon(icon7)
+        icon8 = QIcon()
+        icon8.addFile(u":/Buttons/maximize.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.restore_window_button.setIcon(icon8)
         self.restore_window_button.setIconSize(QSize(23, 23))
 
         self.horizontalLayout_6.addWidget(self.restore_window_button)
@@ -427,9 +434,9 @@ class Ui_MainWindow(object):
         self.close_window_button = QPushButton(self.header_nav)
         self.close_window_button.setObjectName(u"close_window_button")
         self.close_window_button.setMaximumSize(QSize(30, 30))
-        icon8 = QIcon()
-        icon8.addFile(u":/Buttons/close.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.close_window_button.setIcon(icon8)
+        icon9 = QIcon()
+        icon9.addFile(u":/Buttons/close.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.close_window_button.setIcon(icon9)
         self.close_window_button.setIconSize(QSize(29, 29))
 
         self.horizontalLayout_6.addWidget(self.close_window_button)
@@ -442,8 +449,8 @@ class Ui_MainWindow(object):
 
         self.frame_8 = QFrame(self.frame_2)
         self.frame_8.setObjectName(u"frame_8")
-        sizePolicy1.setHeightForWidth(self.frame_8.sizePolicy().hasHeightForWidth())
-        self.frame_8.setSizePolicy(sizePolicy1)
+        sizePolicy.setHeightForWidth(self.frame_8.sizePolicy().hasHeightForWidth())
+        self.frame_8.setSizePolicy(sizePolicy)
         self.frame_8.setMaximumSize(QSize(16777215, 16777215))
         self.frame_8.setStyleSheet(u"#frame_8{\n"
 "background-color: rgb(50, 68, 85);\n"
@@ -456,11 +463,11 @@ class Ui_MainWindow(object):
         self.verticalLayout_5.setContentsMargins(-1, 0, -1, 0)
         self.stackedWidget = QStackedWidget(self.frame_8)
         self.stackedWidget.setObjectName(u"stackedWidget")
-        self.percentage_bar_chart = QWidget()
-        self.percentage_bar_chart.setObjectName(u"percentage_bar_chart")
-        self.verticalLayout_6 = QVBoxLayout(self.percentage_bar_chart)
+        self.major_company_cloud_breaches = QWidget()
+        self.major_company_cloud_breaches.setObjectName(u"major_company_cloud_breaches")
+        self.verticalLayout_6 = QVBoxLayout(self.major_company_cloud_breaches)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
-        self.frame_16 = QFrame(self.percentage_bar_chart)
+        self.frame_16 = QFrame(self.major_company_cloud_breaches)
         self.frame_16.setObjectName(u"frame_16")
         self.frame_16.setFrameShape(QFrame.StyledPanel)
         self.frame_16.setFrameShadow(QFrame.Raised)
@@ -477,10 +484,10 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_6.addWidget(self.frame_16)
 
-        self.frame_17 = QFrame(self.percentage_bar_chart)
+        self.frame_17 = QFrame(self.major_company_cloud_breaches)
         self.frame_17.setObjectName(u"frame_17")
-        sizePolicy.setHeightForWidth(self.frame_17.sizePolicy().hasHeightForWidth())
-        self.frame_17.setSizePolicy(sizePolicy)
+        sizePolicy1.setHeightForWidth(self.frame_17.sizePolicy().hasHeightForWidth())
+        self.frame_17.setSizePolicy(sizePolicy1)
         self.frame_17.setFrameShape(QFrame.StyledPanel)
         self.frame_17.setFrameShadow(QFrame.Raised)
         self.gridLayout = QGridLayout(self.frame_17)
@@ -495,12 +502,12 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_6.addWidget(self.frame_17)
 
-        self.stackedWidget.addWidget(self.percentage_bar_chart)
-        self.temperature_bar_chart = QWidget()
-        self.temperature_bar_chart.setObjectName(u"temperature_bar_chart")
-        self.verticalLayout_7 = QVBoxLayout(self.temperature_bar_chart)
+        self.stackedWidget.addWidget(self.major_company_cloud_breaches)
+        self.us_major_cloud_breaches = QWidget()
+        self.us_major_cloud_breaches.setObjectName(u"us_major_cloud_breaches")
+        self.verticalLayout_7 = QVBoxLayout(self.us_major_cloud_breaches)
         self.verticalLayout_7.setObjectName(u"verticalLayout_7")
-        self.frame_19 = QFrame(self.temperature_bar_chart)
+        self.frame_19 = QFrame(self.us_major_cloud_breaches)
         self.frame_19.setObjectName(u"frame_19")
         self.frame_19.setFrameShape(QFrame.StyledPanel)
         self.frame_19.setFrameShadow(QFrame.Raised)
@@ -515,10 +522,10 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_7.addWidget(self.frame_19, 0, Qt.AlignTop)
 
-        self.frame_20 = QFrame(self.temperature_bar_chart)
+        self.frame_20 = QFrame(self.us_major_cloud_breaches)
         self.frame_20.setObjectName(u"frame_20")
-        sizePolicy.setHeightForWidth(self.frame_20.sizePolicy().hasHeightForWidth())
-        self.frame_20.setSizePolicy(sizePolicy)
+        sizePolicy1.setHeightForWidth(self.frame_20.sizePolicy().hasHeightForWidth())
+        self.frame_20.setSizePolicy(sizePolicy1)
         self.frame_20.setFrameShape(QFrame.StyledPanel)
         self.frame_20.setFrameShadow(QFrame.Raised)
         self.gridLayout_2 = QGridLayout(self.frame_20)
@@ -533,12 +540,12 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_7.addWidget(self.frame_20)
 
-        self.stackedWidget.addWidget(self.temperature_bar_chart)
-        self.nested_donuts = QWidget()
-        self.nested_donuts.setObjectName(u"nested_donuts")
-        self.verticalLayout_8 = QVBoxLayout(self.nested_donuts)
+        self.stackedWidget.addWidget(self.us_major_cloud_breaches)
+        self.russian_major_cloud_breaches = QWidget()
+        self.russian_major_cloud_breaches.setObjectName(u"russian_major_cloud_breaches")
+        self.verticalLayout_8 = QVBoxLayout(self.russian_major_cloud_breaches)
         self.verticalLayout_8.setObjectName(u"verticalLayout_8")
-        self.frame_22 = QFrame(self.nested_donuts)
+        self.frame_22 = QFrame(self.russian_major_cloud_breaches)
         self.frame_22.setObjectName(u"frame_22")
         self.frame_22.setFrameShape(QFrame.StyledPanel)
         self.frame_22.setFrameShadow(QFrame.Raised)
@@ -553,10 +560,10 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_8.addWidget(self.frame_22, 0, Qt.AlignTop)
 
-        self.frame_23 = QFrame(self.nested_donuts)
+        self.frame_23 = QFrame(self.russian_major_cloud_breaches)
         self.frame_23.setObjectName(u"frame_23")
-        sizePolicy.setHeightForWidth(self.frame_23.sizePolicy().hasHeightForWidth())
-        self.frame_23.setSizePolicy(sizePolicy)
+        sizePolicy1.setHeightForWidth(self.frame_23.sizePolicy().hasHeightForWidth())
+        self.frame_23.setSizePolicy(sizePolicy1)
         self.frame_23.setFrameShape(QFrame.StyledPanel)
         self.frame_23.setFrameShadow(QFrame.Raised)
         self.gridLayout_3 = QGridLayout(self.frame_23)
@@ -571,13 +578,13 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_8.addWidget(self.frame_23)
 
-        self.stackedWidget.addWidget(self.nested_donuts)
-        self.line_charts = QWidget()
-        self.line_charts.setObjectName(u"line_charts")
-        self.line_charts.setStyleSheet(u"")
-        self.verticalLayout_9 = QVBoxLayout(self.line_charts)
+        self.stackedWidget.addWidget(self.russian_major_cloud_breaches)
+        self.china_major_cloud_breaches = QWidget()
+        self.china_major_cloud_breaches.setObjectName(u"china_major_cloud_breaches")
+        self.china_major_cloud_breaches.setStyleSheet(u"")
+        self.verticalLayout_9 = QVBoxLayout(self.china_major_cloud_breaches)
         self.verticalLayout_9.setObjectName(u"verticalLayout_9")
-        self.frame_25 = QFrame(self.line_charts)
+        self.frame_25 = QFrame(self.china_major_cloud_breaches)
         self.frame_25.setObjectName(u"frame_25")
         self.frame_25.setFrameShape(QFrame.StyledPanel)
         self.frame_25.setFrameShadow(QFrame.Raised)
@@ -592,21 +599,21 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_9.addWidget(self.frame_25, 0, Qt.AlignTop)
 
-        self.frame_26 = QFrame(self.line_charts)
+        self.frame_26 = QFrame(self.china_major_cloud_breaches)
         self.frame_26.setObjectName(u"frame_26")
-        sizePolicy.setHeightForWidth(self.frame_26.sizePolicy().hasHeightForWidth())
-        self.frame_26.setSizePolicy(sizePolicy)
+        sizePolicy1.setHeightForWidth(self.frame_26.sizePolicy().hasHeightForWidth())
+        self.frame_26.setSizePolicy(sizePolicy1)
         self.frame_26.setFrameShape(QFrame.StyledPanel)
         self.frame_26.setFrameShadow(QFrame.Raised)
 
         self.verticalLayout_9.addWidget(self.frame_26)
 
-        self.stackedWidget.addWidget(self.line_charts)
-        self.bar_charts = QWidget()
-        self.bar_charts.setObjectName(u"bar_charts")
-        self.verticalLayout_10 = QVBoxLayout(self.bar_charts)
+        self.stackedWidget.addWidget(self.china_major_cloud_breaches)
+        self.uk_major_cloud_breaches = QWidget()
+        self.uk_major_cloud_breaches.setObjectName(u"uk_major_cloud_breaches")
+        self.verticalLayout_10 = QVBoxLayout(self.uk_major_cloud_breaches)
         self.verticalLayout_10.setObjectName(u"verticalLayout_10")
-        self.frame_28 = QFrame(self.bar_charts)
+        self.frame_28 = QFrame(self.uk_major_cloud_breaches)
         self.frame_28.setObjectName(u"frame_28")
         self.frame_28.setStyleSheet(u"#frame_28{\n"
 "background-color: rgb(50, 68, 85);\n"
@@ -627,10 +634,10 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_10.addWidget(self.frame_28, 0, Qt.AlignTop)
 
-        self.frame_27 = QFrame(self.bar_charts)
+        self.frame_27 = QFrame(self.uk_major_cloud_breaches)
         self.frame_27.setObjectName(u"frame_27")
-        sizePolicy.setHeightForWidth(self.frame_27.sizePolicy().hasHeightForWidth())
-        self.frame_27.setSizePolicy(sizePolicy)
+        sizePolicy1.setHeightForWidth(self.frame_27.sizePolicy().hasHeightForWidth())
+        self.frame_27.setSizePolicy(sizePolicy1)
         self.frame_27.setStyleSheet(u"#frame_27{\n"
 "background-color: rgb(50, 68, 85);\n"
 "}")
@@ -639,7 +646,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_10.addWidget(self.frame_27)
 
-        self.stackedWidget.addWidget(self.bar_charts)
+        self.stackedWidget.addWidget(self.uk_major_cloud_breaches)
 
         self.verticalLayout_5.addWidget(self.stackedWidget)
 
@@ -661,6 +668,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout_7.setContentsMargins(-1, 9, -1, 4)
         self.frame_13 = QFrame(self.frame_9)
         self.frame_13.setObjectName(u"frame_13")
+        sizePolicy.setHeightForWidth(self.frame_13.sizePolicy().hasHeightForWidth())
+        self.frame_13.setSizePolicy(sizePolicy)
         self.frame_13.setStyleSheet(u"#frame_13{\n"
 "	background-color: rgb(33, 35, 49);\n"
 "\n"
@@ -671,24 +680,20 @@ class Ui_MainWindow(object):
         self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
         self.label_9 = QLabel(self.frame_13)
         self.label_9.setObjectName(u"label_9")
+        sizePolicy4 = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Preferred)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.label_9.sizePolicy().hasHeightForWidth())
+        self.label_9.setSizePolicy(sizePolicy4)
         self.label_9.setStyleSheet(u"#label_9{\n"
 "	background-color: rgb(33, 35, 49);\n"
 "}")
+        self.label_9.setScaledContents(False)
 
         self.horizontalLayout_9.addWidget(self.label_9)
 
 
         self.horizontalLayout_7.addWidget(self.frame_13)
-
-        self.frame_14 = QFrame(self.frame_9)
-        self.frame_14.setObjectName(u"frame_14")
-        self.frame_14.setStyleSheet(u"#frame_14{\n"
-"	background-color: rgb(33, 35, 49);\n"
-"}")
-        self.frame_14.setFrameShape(QFrame.StyledPanel)
-        self.frame_14.setFrameShadow(QFrame.Raised)
-
-        self.horizontalLayout_7.addWidget(self.frame_14)
 
 
         self.verticalLayout_4.addWidget(self.frame_9)
@@ -700,7 +705,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -710,11 +715,11 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.label_15.setText("")
         self.label.setText(QCoreApplication.translate("MainWindow", u"  CHART DATA", None))
-        self.percent_bar_chart_button.setText(QCoreApplication.translate("MainWindow", u"  Percentage Bar Chart", None))
-        self.temperature_chart_button.setText(QCoreApplication.translate("MainWindow", u"  Temperature Chart", None))
-        self.nested_donuts_button.setText(QCoreApplication.translate("MainWindow", u"  Nested Donuts", None))
-        self.line_chart_button.setText(QCoreApplication.translate("MainWindow", u"   Line Charts", None))
-        self.bar_chart_button.setText(QCoreApplication.translate("MainWindow", u"   Bar Charts", None))
+        self.company_cloud_breaches_button.setText(QCoreApplication.translate("MainWindow", u"Major Company Breaches", None))
+        self.us_cloud_breaches_button.setText(QCoreApplication.translate("MainWindow", u"U.S Major Cloud Breaches", None))
+        self.russian_cloud_breaches_button.setText(QCoreApplication.translate("MainWindow", u"Russian Major Cloud Breaches", None))
+        self.china_cloud_breaches_button.setText(QCoreApplication.translate("MainWindow", u"China Major Cloud Breaches", None))
+        self.uk_cloud_breaches_button.setText(QCoreApplication.translate("MainWindow", u"U.K. Major Cloud Breaches", None))
         self.label_16.setText("")
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"  Engineering 1100 Final Project", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Jacob Sprouse", None))
@@ -727,11 +732,11 @@ class Ui_MainWindow(object):
         self.minimize_window_button.setText("")
         self.restore_window_button.setText("")
         self.close_window_button.setText("")
-        self.label_10.setText(QCoreApplication.translate("MainWindow", u"Percentage Bar Chart", None))
-        self.label_11.setText(QCoreApplication.translate("MainWindow", u"Temperature Bar Chart", None))
-        self.label_12.setText(QCoreApplication.translate("MainWindow", u"Nested Donut Chart", None))
-        self.label_13.setText(QCoreApplication.translate("MainWindow", u"Line Charts", None))
-        self.label_14.setText(QCoreApplication.translate("MainWindow", u"Bar Chart", None))
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"Major Company Cloud Breaches", None))
+        self.label_11.setText(QCoreApplication.translate("MainWindow", u"U.S. Major Cloud Breaches", None))
+        self.label_12.setText(QCoreApplication.translate("MainWindow", u"Russian Major Cloud Breaches", None))
+        self.label_13.setText(QCoreApplication.translate("MainWindow", u"China Major Cloud Breaches", None))
+        self.label_14.setText(QCoreApplication.translate("MainWindow", u"U.K. Major Cloud Breaches", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Auburn University", None))
     # retranslateUi
 

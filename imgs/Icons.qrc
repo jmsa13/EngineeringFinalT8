@@ -3,6 +3,7 @@
     <file>Auburn_logo.jpg</file>
   </qresource>
   <qresource prefix="Buttons">
+    <file>cloud.png</file>
     <file>python-logo-only.png</file>
     <file>close.png</file>
     <file>maximize.png</file>

@@ -4,6 +4,7 @@ from PySide6.QtCore import *
 from PySide6.QtCharts import QChart
 
 from ui_interface import *
+import matplotlib.pyplot as plt
 
 import sys
 
@@ -12,7 +13,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         # Calls the ui_interface.py file and makes that the main window
-        # then hides the window title as well as setup the Ui widgets
+        # then hides the window title as well as set up the Ui widgets
         self.ui = Ui_MainWindow()
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.ui.setupUi(self)
@@ -45,11 +46,11 @@ class MainWindow(QMainWindow):
             self.ui.restore_window_button: self.toggle_window,
             self.ui.minimize_window_button: self.minimize_window,
             self.ui.close_window_button: self.close,
-            self.ui.percent_bar_chart_button: lambda: self.change_widget(0),
-            self.ui.temperature_chart_button: lambda: self.change_widget(1),
-            self.ui.nested_donuts_button: lambda: self.change_widget(2),
-            self.ui.line_chart_button: lambda: self.change_widget(3),
-            self.ui.bar_chart_button: lambda: self.change_widget(4),
+            self.ui.company_cloud_breaches_button: lambda: self.change_widget(0),
+            self.ui.us_cloud_breaches_button: lambda: self.change_widget(1),
+            self.ui.russian_cloud_breaches_button: lambda: self.change_widget(2),
+            self.ui.china_cloud_breaches_button: lambda: self.change_widget(3),
+            self.ui.uk_cloud_breaches_button: lambda: self.change_widget(4),
             self.ui.menu_button: self.toggle_menu
         }
 
@@ -103,16 +104,19 @@ class MainWindow(QMainWindow):
 
         # Reset all the chart buttons to unchecked
         chart_buttons = [
-            self.ui.percent_bar_chart_button,
-            self.ui.temperature_chart_button,
-            self.ui.nested_donuts_button,
-            self.ui.line_chart_button,
-            self.ui.bar_chart_button
+            self.ui.company_cloud_breaches_button,
+            self.ui.us_cloud_breaches_button,
+            self.ui.russian_cloud_breaches_button,
+            self.ui.china_cloud_breaches_button,
+            self.ui.uk_cloud_breaches_button
         ]
 
         # goes through buttons in the list to set too false to change the index of the tab when clicked again
         for button in chart_buttons:
             button.setChecked(False)
+
+    def cloud_breaches_data(self):
+        pass
 
 
 if __name__ == "__main__":

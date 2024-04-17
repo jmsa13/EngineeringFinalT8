@@ -7,9 +7,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>773</width>
+    <width>832</width>
     <height>511</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="maximumSize">
    <size>
@@ -19,6 +25,10 @@
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../imgs/Icons.qrc">
+    <normaloff>:/Main/Auburn_logo.jpg</normaloff>:/Main/Auburn_logo.jpg</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
@@ -38,7 +48,7 @@ QWidget{
 	background-color: rgb(45, 46, 76);
 }
 
-left_menu_widget, #percentage_bar_chart, #nested_donuts, 
+left_menu_widget, #cloud_infrastructure_chart, #nested_donuts, 
 #line_charts, #bar_charts, #temperature_bar_chart, #stackedWidget QFrame
 {
 background-color: rgb(50, 68, 85);
@@ -59,6 +69,14 @@ border-radius: 15px;
 }
 #header_nav QPushButton:hover{
 background-color: rgb(120, 157, 186);
+}
+
+#left_menu_widget QPushButton:hover{
+background-color:rgb(120, 157, 186);
+}
+
+#header_menu_nav QPushButton:hover{
+background-color:rgb(120, 157, 186);
 }
 </string>
    </property>
@@ -261,7 +279,10 @@ background-color: rgb(50, 68, 85);
            <number>0</number>
           </property>
           <item>
-           <widget class="QPushButton" name="percent_bar_chart_button">
+           <widget class="QPushButton" name="cloud_infrastructure_button">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
               <horstretch>0</horstretch>
@@ -270,7 +291,7 @@ background-color: rgb(50, 68, 85);
             </property>
             <property name="maximumSize">
              <size>
-              <width>200</width>
+              <width>16777215</width>
               <height>33</height>
              </size>
             </property>
@@ -278,7 +299,7 @@ background-color: rgb(50, 68, 85);
              <string notr="true"/>
             </property>
             <property name="text">
-             <string>  Percentage Bar Chart</string>
+             <string>Cloud Infrastructure </string>
             </property>
             <property name="icon">
              <iconset resource="../imgs/Icons.qrc">
@@ -624,14 +645,14 @@ background-color: rgb(50, 68, 85);
        <item alignment="Qt::AlignTop">
         <widget class="QFrame" name="header_frame">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <sizepolicy hsizetype="Ignored" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
          <property name="minimumSize">
           <size>
-           <width>566</width>
+           <width>600</width>
            <height>0</height>
           </size>
          </property>
@@ -685,6 +706,10 @@ background-color: rgb(54, 66, 147);
             <property name="styleSheet">
              <string notr="true">#header_menu_nav, QPushButton{
 background-color: rgb(54, 66, 147);
+}
+
+#header_menu_nav QPushButton:hover{
+background-color:rgb(120, 170, 186);
 }</string>
             </property>
             <property name="frameShape">
@@ -951,9 +976,9 @@ background-color: rgb(50, 68, 85);
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>1</number>
+             <number>0</number>
             </property>
-            <widget class="QWidget" name="percentage_bar_chart">
+            <widget class="QWidget" name="cloud_infrastructure_chart">
              <layout class="QVBoxLayout" name="verticalLayout_6">
               <item>
                <widget class="QFrame" name="frame_16">
@@ -973,7 +998,7 @@ background-color: rgb(50, 68, 85);
                     <bool>false</bool>
                    </property>
                    <property name="text">
-                    <string>Percentage Bar Chart</string>
+                    <string>Cloud Infrastructure Breaches</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -1265,6 +1290,12 @@ background-color: rgb(50, 68, 85);
           </property>
           <item>
            <widget class="QFrame" name="frame_13">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="styleSheet">
              <string notr="true">#frame_13{
 	background-color: rgb(33, 35, 49);
@@ -1280,6 +1311,12 @@ background-color: rgb(50, 68, 85);
             <layout class="QHBoxLayout" name="horizontalLayout_9">
              <item>
               <widget class="QLabel" name="label_9">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
                <property name="styleSheet">
                 <string notr="true">#label_9{
 	background-color: rgb(33, 35, 49);
@@ -1288,24 +1325,12 @@ background-color: rgb(50, 68, 85);
                <property name="text">
                 <string>Auburn University</string>
                </property>
+               <property name="scaledContents">
+                <bool>false</bool>
+               </property>
               </widget>
              </item>
             </layout>
-           </widget>
-          </item>
-          <item>
-           <widget class="QFrame" name="frame_14">
-            <property name="styleSheet">
-             <string notr="true">#frame_14{
-	background-color: rgb(33, 35, 49);
-}</string>
-            </property>
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
            </widget>
           </item>
          </layout>
