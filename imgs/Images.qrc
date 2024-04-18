@@ -1,0 +1,23 @@
+<RCC>
+  <qresource prefix="Buttons">
+    <file>analysis.png</file>
+    <file>analytics (1).png</file>
+    <file>analytics.png</file>
+    <file>Auburn_logo.jpg</file>
+    <file>close.png</file>
+    <file>cloud.png</file>
+    <file>hot.png</file>
+    <file>icons8-china-100.png</file>
+    <file>icons8-cloud-64.png</file>
+    <file>icons8-russia-100.png</file>
+    <file>icons8-united-kingdom-48.png</file>
+    <file>icons8-united-states-16.png</file>
+    <file>icons8-united-states-30.png</file>
+    <file>line-chart.png</file>
+    <file>maximize.png</file>
+    <file>menu.png</file>
+    <file>minus-button.png</file>
+    <file>pie-chart.png</file>
+    <file>python-logo-only.png</file>
+  </qresource>
+</RCC>

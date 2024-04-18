@@ -1,9 +1,5 @@
-from PySide6.QtGui import QDragMoveEvent
-from PySide6.QtWidgets import QPushButton
-from PySide6.QtCore import *
-from PySide6.QtCharts import QChart
-
 from ui_interface import *
+import pandas as pd
 import matplotlib.pyplot as plt
 
 import sys
@@ -115,7 +111,7 @@ class MainWindow(QMainWindow):
         for button in chart_buttons:
             button.setChecked(False)
 
-    def cloud_breaches_data(self):
+    def company_cloud_breaches_data(self):
         pass
 
 

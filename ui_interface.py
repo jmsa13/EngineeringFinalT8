@@ -1,4 +1,5 @@
 
+
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
@@ -9,7 +10,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
     QLabel, QMainWindow, QPushButton, QSizePolicy,
     QStackedWidget, QVBoxLayout, QWidget)
-import Icons_rc
+import Images_rc
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -158,9 +160,9 @@ class Ui_MainWindow(object):
         self.company_cloud_breaches_button.setMaximumSize(QSize(16777215, 33))
         self.company_cloud_breaches_button.setStyleSheet(u"")
         icon1 = QIcon()
-        icon1.addFile(u":/Buttons/analytics.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(u":/Buttons/cloud.png", QSize(), QIcon.Normal, QIcon.Off)
         self.company_cloud_breaches_button.setIcon(icon1)
-        self.company_cloud_breaches_button.setIconSize(QSize(23, 23))
+        self.company_cloud_breaches_button.setIconSize(QSize(30, 30))
 
         self.verticalLayout_2.addWidget(self.company_cloud_breaches_button)
 
@@ -170,9 +172,9 @@ class Ui_MainWindow(object):
         self.us_cloud_breaches_button.setSizePolicy(sizePolicy2)
         self.us_cloud_breaches_button.setMaximumSize(QSize(16777215, 33))
         icon2 = QIcon()
-        icon2.addFile(u":/Buttons/hot.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon2.addFile(u":/Buttons/icons8-united-states-30.png", QSize(), QIcon.Normal, QIcon.Off)
         self.us_cloud_breaches_button.setIcon(icon2)
-        self.us_cloud_breaches_button.setIconSize(QSize(23, 23))
+        self.us_cloud_breaches_button.setIconSize(QSize(30, 30))
 
         self.verticalLayout_2.addWidget(self.us_cloud_breaches_button)
 
@@ -182,9 +184,9 @@ class Ui_MainWindow(object):
         self.russian_cloud_breaches_button.setSizePolicy(sizePolicy2)
         self.russian_cloud_breaches_button.setMaximumSize(QSize(16777215, 33))
         icon3 = QIcon()
-        icon3.addFile(u":/Buttons/pie-chart.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon3.addFile(u":/Buttons/icons8-russia-100.png", QSize(), QIcon.Normal, QIcon.Off)
         self.russian_cloud_breaches_button.setIcon(icon3)
-        self.russian_cloud_breaches_button.setIconSize(QSize(23, 23))
+        self.russian_cloud_breaches_button.setIconSize(QSize(30, 30))
 
         self.verticalLayout_2.addWidget(self.russian_cloud_breaches_button)
 
@@ -194,9 +196,9 @@ class Ui_MainWindow(object):
         self.china_cloud_breaches_button.setSizePolicy(sizePolicy2)
         self.china_cloud_breaches_button.setMaximumSize(QSize(16777215, 33))
         icon4 = QIcon()
-        icon4.addFile(u":/Buttons/line-chart.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon4.addFile(u":/Buttons/icons8-china-100.png", QSize(), QIcon.Normal, QIcon.Off)
         self.china_cloud_breaches_button.setIcon(icon4)
-        self.china_cloud_breaches_button.setIconSize(QSize(23, 23))
+        self.china_cloud_breaches_button.setIconSize(QSize(30, 30))
 
         self.verticalLayout_2.addWidget(self.china_cloud_breaches_button)
 
@@ -206,8 +208,9 @@ class Ui_MainWindow(object):
         self.uk_cloud_breaches_button.setSizePolicy(sizePolicy2)
         self.uk_cloud_breaches_button.setMaximumSize(QSize(16777215, 33))
         icon5 = QIcon()
-        icon5.addFile(u":/Buttons/analytics (1).png", QSize(), QIcon.Normal, QIcon.Off)
+        icon5.addFile(u":/Buttons/icons8-united-kingdom-48.png", QSize(), QIcon.Normal, QIcon.Off)
         self.uk_cloud_breaches_button.setIcon(icon5)
+        self.uk_cloud_breaches_button.setIconSize(QSize(30, 30))
 
         self.verticalLayout_2.addWidget(self.uk_cloud_breaches_button)
 
@@ -715,8 +718,8 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.label_15.setText("")
         self.label.setText(QCoreApplication.translate("MainWindow", u"  CHART DATA", None))
-        self.company_cloud_breaches_button.setText(QCoreApplication.translate("MainWindow", u"Major Company Breaches", None))
-        self.us_cloud_breaches_button.setText(QCoreApplication.translate("MainWindow", u"U.S Major Cloud Breaches", None))
+        self.company_cloud_breaches_button.setText(QCoreApplication.translate("MainWindow", u" Major Company Breaches", None))
+        self.us_cloud_breaches_button.setText(QCoreApplication.translate("MainWindow", u"  U.S Major Cloud Breaches", None))
         self.russian_cloud_breaches_button.setText(QCoreApplication.translate("MainWindow", u"Russian Major Cloud Breaches", None))
         self.china_cloud_breaches_button.setText(QCoreApplication.translate("MainWindow", u"China Major Cloud Breaches", None))
         self.uk_cloud_breaches_button.setText(QCoreApplication.translate("MainWindow", u"U.K. Major Cloud Breaches", None))

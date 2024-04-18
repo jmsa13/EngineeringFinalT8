@@ -27,7 +27,7 @@
    <string>MainWindow</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../imgs/Icons.qrc">
+   <iconset>
     <normaloff>:/Main/Auburn_logo.jpg</normaloff>:/Main/Auburn_logo.jpg</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -48,8 +48,8 @@ QWidget{
 	background-color: rgb(45, 46, 76);
 }
 
-left_menu_widget, #cloud_infrastructure_chart, #nested_donuts, 
-#line_charts, #bar_charts, #temperature_bar_chart, #stackedWidget QFrame
+left_menu_widget, #major_company_cloud_breaches, #us_major_cloud_breaches, 
+#russian_major_cloud_breaches, #china_major_cloud_breaches, #uk_major_cloud_breaches, #stackedWidget QFrame
 {
 background-color: rgb(50, 68, 85);
 }
@@ -208,7 +208,7 @@ background-color: rgb(54, 66, 147);
              <string/>
             </property>
             <property name="pixmap">
-             <pixmap resource="../imgs/Icons.qrc">:/Buttons/analysis.png</pixmap>
+             <pixmap resource="../imgs/Images.qrc">:/Buttons/analysis.png</pixmap>
             </property>
             <property name="scaledContents">
              <bool>true</bool>
@@ -279,7 +279,7 @@ background-color: rgb(50, 68, 85);
            <number>0</number>
           </property>
           <item>
-           <widget class="QPushButton" name="cloud_infrastructure_button">
+           <widget class="QPushButton" name="company_cloud_breaches_button">
             <property name="enabled">
              <bool>true</bool>
             </property>
@@ -299,22 +299,22 @@ background-color: rgb(50, 68, 85);
              <string notr="true"/>
             </property>
             <property name="text">
-             <string>Cloud Infrastructure </string>
+             <string> Major Company Breaches</string>
             </property>
             <property name="icon">
-             <iconset resource="../imgs/Icons.qrc">
-              <normaloff>:/Buttons/analytics.png</normaloff>:/Buttons/analytics.png</iconset>
+             <iconset resource="../imgs/Images.qrc">
+              <normaloff>:/Buttons/cloud.png</normaloff>:/Buttons/cloud.png</iconset>
             </property>
             <property name="iconSize">
              <size>
-              <width>23</width>
-              <height>23</height>
+              <width>30</width>
+              <height>30</height>
              </size>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="temperature_chart_button">
+           <widget class="QPushButton" name="us_cloud_breaches_button">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
               <horstretch>0</horstretch>
@@ -328,22 +328,22 @@ background-color: rgb(50, 68, 85);
              </size>
             </property>
             <property name="text">
-             <string>  Temperature Chart</string>
+             <string>  U.S Major Cloud Breaches</string>
             </property>
             <property name="icon">
-             <iconset resource="../imgs/Icons.qrc">
-              <normaloff>:/Buttons/hot.png</normaloff>:/Buttons/hot.png</iconset>
+             <iconset resource="../imgs/Images.qrc">
+              <normaloff>:/Buttons/icons8-united-states-30.png</normaloff>:/Buttons/icons8-united-states-30.png</iconset>
             </property>
             <property name="iconSize">
              <size>
-              <width>23</width>
-              <height>23</height>
+              <width>30</width>
+              <height>30</height>
              </size>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="nested_donuts_button">
+           <widget class="QPushButton" name="russian_cloud_breaches_button">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
               <horstretch>0</horstretch>
@@ -357,22 +357,22 @@ background-color: rgb(50, 68, 85);
              </size>
             </property>
             <property name="text">
-             <string>  Nested Donuts</string>
+             <string>Russian Major Cloud Breaches</string>
             </property>
             <property name="icon">
-             <iconset resource="../imgs/Icons.qrc">
-              <normaloff>:/Buttons/pie-chart.png</normaloff>:/Buttons/pie-chart.png</iconset>
+             <iconset resource="../imgs/Images.qrc">
+              <normaloff>:/Buttons/icons8-russia-100.png</normaloff>:/Buttons/icons8-russia-100.png</iconset>
             </property>
             <property name="iconSize">
              <size>
-              <width>23</width>
-              <height>23</height>
+              <width>30</width>
+              <height>30</height>
              </size>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="line_chart_button">
+           <widget class="QPushButton" name="china_cloud_breaches_button">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
               <horstretch>0</horstretch>
@@ -386,22 +386,22 @@ background-color: rgb(50, 68, 85);
              </size>
             </property>
             <property name="text">
-             <string>   Line Charts</string>
+             <string>China Major Cloud Breaches</string>
             </property>
             <property name="icon">
-             <iconset resource="../imgs/Icons.qrc">
-              <normaloff>:/Buttons/line-chart.png</normaloff>:/Buttons/line-chart.png</iconset>
+             <iconset resource="../imgs/Images.qrc">
+              <normaloff>:/Buttons/icons8-china-100.png</normaloff>:/Buttons/icons8-china-100.png</iconset>
             </property>
             <property name="iconSize">
              <size>
-              <width>23</width>
-              <height>23</height>
+              <width>30</width>
+              <height>30</height>
              </size>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="bar_chart_button">
+           <widget class="QPushButton" name="uk_cloud_breaches_button">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
               <horstretch>0</horstretch>
@@ -415,11 +415,17 @@ background-color: rgb(50, 68, 85);
              </size>
             </property>
             <property name="text">
-             <string>   Bar Charts</string>
+             <string>U.K. Major Cloud Breaches</string>
             </property>
             <property name="icon">
-             <iconset resource="../imgs/Icons.qrc">
-              <normaloff>:/Buttons/analytics (1).png</normaloff>:/Buttons/analytics (1).png</iconset>
+             <iconset resource="../imgs/Images.qrc">
+              <normaloff>:/Buttons/icons8-united-kingdom-48.png</normaloff>:/Buttons/icons8-united-kingdom-48.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -481,7 +487,7 @@ background-color: rgb(50, 68, 85);
              <string/>
             </property>
             <property name="pixmap">
-             <pixmap resource="../imgs/Icons.qrc">:/Buttons/python-logo-only.png</pixmap>
+             <pixmap resource="../imgs/Images.qrc">:/Buttons/python-logo-only.png</pixmap>
             </property>
             <property name="scaledContents">
              <bool>true</bool>
@@ -740,7 +746,7 @@ background-color:rgb(120, 170, 186);
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="../imgs/Icons.qrc">
+                <iconset resource="../imgs/Images.qrc">
                  <normaloff>:/Buttons/menu.png</normaloff>:/Buttons/menu.png</iconset>
                </property>
                <property name="iconSize">
@@ -875,7 +881,7 @@ background-color: rgb(54, 66, 147);
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="../imgs/Icons.qrc">
+                <iconset resource="../imgs/Images.qrc">
                  <normaloff>:/Buttons/minus-button.png</normaloff>:/Buttons/minus-button.png</iconset>
                </property>
                <property name="iconSize">
@@ -898,7 +904,7 @@ background-color: rgb(54, 66, 147);
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="../imgs/Icons.qrc">
+                <iconset resource="../imgs/Images.qrc">
                  <normaloff>:/Buttons/maximize.png</normaloff>:/Buttons/maximize.png</iconset>
                </property>
                <property name="iconSize">
@@ -921,7 +927,7 @@ background-color: rgb(54, 66, 147);
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="../imgs/Icons.qrc">
+                <iconset resource="../imgs/Images.qrc">
                  <normaloff>:/Buttons/close.png</normaloff>:/Buttons/close.png</iconset>
                </property>
                <property name="iconSize">
@@ -976,9 +982,9 @@ background-color: rgb(50, 68, 85);
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>0</number>
+             <number>2</number>
             </property>
-            <widget class="QWidget" name="cloud_infrastructure_chart">
+            <widget class="QWidget" name="major_company_cloud_breaches">
              <layout class="QVBoxLayout" name="verticalLayout_6">
               <item>
                <widget class="QFrame" name="frame_16">
@@ -998,7 +1004,7 @@ background-color: rgb(50, 68, 85);
                     <bool>false</bool>
                    </property>
                    <property name="text">
-                    <string>Cloud Infrastructure Breaches</string>
+                    <string>Major Company Cloud Breaches</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -1038,7 +1044,7 @@ background-color: rgb(50, 68, 85);
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="temperature_bar_chart">
+            <widget class="QWidget" name="us_major_cloud_breaches">
              <layout class="QVBoxLayout" name="verticalLayout_7">
               <item alignment="Qt::AlignTop">
                <widget class="QFrame" name="frame_19">
@@ -1052,7 +1058,7 @@ background-color: rgb(50, 68, 85);
                  <item alignment="Qt::AlignTop">
                   <widget class="QLabel" name="label_11">
                    <property name="text">
-                    <string>Temperature Bar Chart</string>
+                    <string>U.S. Major Cloud Breaches</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -1092,7 +1098,7 @@ background-color: rgb(50, 68, 85);
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="nested_donuts">
+            <widget class="QWidget" name="russian_major_cloud_breaches">
              <layout class="QVBoxLayout" name="verticalLayout_8">
               <item alignment="Qt::AlignTop">
                <widget class="QFrame" name="frame_22">
@@ -1106,7 +1112,7 @@ background-color: rgb(50, 68, 85);
                  <item alignment="Qt::AlignTop">
                   <widget class="QLabel" name="label_12">
                    <property name="text">
-                    <string>Nested Donut Chart</string>
+                    <string>Russian Major Cloud Breaches</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -1146,7 +1152,7 @@ background-color: rgb(50, 68, 85);
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="line_charts">
+            <widget class="QWidget" name="china_major_cloud_breaches">
              <property name="styleSheet">
               <string notr="true"/>
              </property>
@@ -1163,7 +1169,7 @@ background-color: rgb(50, 68, 85);
                  <item alignment="Qt::AlignTop">
                   <widget class="QLabel" name="label_13">
                    <property name="text">
-                    <string>Line Charts</string>
+                    <string>China Major Cloud Breaches</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -1191,7 +1197,7 @@ background-color: rgb(50, 68, 85);
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="bar_charts">
+            <widget class="QWidget" name="uk_major_cloud_breaches">
              <layout class="QVBoxLayout" name="verticalLayout_10">
               <item alignment="Qt::AlignTop">
                <widget class="QFrame" name="frame_28">
@@ -1215,7 +1221,7 @@ background-color: rgb(50, 68, 85);
 }</string>
                    </property>
                    <property name="text">
-                    <string>Bar Chart</string>
+                    <string>U.K. Major Cloud Breaches</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -1343,7 +1349,7 @@ background-color: rgb(50, 68, 85);
   </widget>
  </widget>
  <resources>
-  <include location="../imgs/Icons.qrc"/>
+  <include location="../imgs/Images.qrc"/>
  </resources>
  <connections/>
 </ui>
