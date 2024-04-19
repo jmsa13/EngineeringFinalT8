@@ -982,7 +982,7 @@ background-color: rgb(50, 68, 85);
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>2</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="major_company_cloud_breaches">
              <layout class="QVBoxLayout" name="verticalLayout_6">

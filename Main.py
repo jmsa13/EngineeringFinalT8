@@ -1,6 +1,8 @@
 from ui_interface import *
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.figure import Figure
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 
 import sys
 
@@ -95,9 +97,11 @@ class MainWindow(QMainWindow):
             the function then changes all buttons to false after the designated widget is 
             shown after this function is called.
     """
+
     def change_widget(self, index):
         self.ui.stackedWidget.setCurrentIndex(index)
-
+        if self.ui.stackedWidget.currentIndex() == 0:
+            self.company_cloud_breaches_data()
         # Reset all the chart buttons to unchecked
         chart_buttons = [
             self.ui.company_cloud_breaches_button,
@@ -112,7 +116,28 @@ class MainWindow(QMainWindow):
             button.setChecked(False)
 
     def company_cloud_breaches_data(self):
-        pass
+        company_data = pd.read_csv('CompanyData.csv')
+        bar_colors = ['tab:purple', 'tab:red', 'tab:blue', 'tab:pink', 'tab:green', 'tab:orange']
+
+        fig = Figure()
+        plot = fig.add_subplot(111)  # Ensure the plot uses a 111 subplot grid
+
+        plot.bar(company_data['Company Name'], company_data['Amount of Users Affected'],
+                 label=company_data['Company Name'],
+                 color=bar_colors)
+        plot.set_title('Major company cloud breaches')
+        plot.set_xlabel('Company Name')
+        plot.set_ylabel('Amount of Users Affected')
+        plot.legend()
+
+        # Create canvas and add to the stacked widget, 
+        # if widget count is higher than 0 remove old widget and insert new one
+        self.plot_canvas = FigureCanvas(fig)
+        if self.ui.stackedWidget.count() > 0:
+            self.ui.stackedWidget.removeWidget(self.ui.stackedWidget.widget(0))
+        self.ui.stackedWidget.insertWidget(0, self.plot_canvas)
+
+        self.ui.stackedWidget.setCurrentIndex(0)  # Ensure the widget is visible
 
 
 if __name__ == "__main__":
