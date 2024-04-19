@@ -18,8 +18,8 @@ There are two dependencies needed to run this program:
 - pip install Pandas
 
 You can run the program through the command line or through an IDE,
-*CMD> python Main.py or >py Main.py
-*IDE> run the main program inside your ide (*make sure you have dependencies installed*)
+* CMD> python Main.py or >py Main.py
+* IDE> run the main program inside your ide (*make sure you have dependencies installed*)
 
 # Example of GUI
 ![image](https://github.com/Jsprouse0/Engr-1100-Final-Project/assets/95829867/42516649-fc9d-434f-8d97-fe40ccf5e83c)
