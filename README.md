@@ -2,7 +2,7 @@
 * Auburn University Intro to Engineering
 <br>
 # Description
-This is our final project utilizing a GUI library **PySide6**, Data Science library **pandas**,
+- This is our final project utilizing a GUI library **PySide6**, Data Science library **pandas**,
 and **Matplotlib** to plot the data onto the GUI to showcase cybersecurity cloud breaches of 
 major companies, and countries.
 * There are 5 tabs, each corresponding to a specific cloud breach
@@ -10,7 +10,7 @@ major companies, and countries.
 * The GUI is moveable and all buttons are highlightable utilizing CSS styling
 <br>
 # How to Run
-There are two dependencies needed to run this program:
+- There are two dependencies needed to run this program:
 1. PySide6
 2. Pandas
 
