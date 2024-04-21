@@ -1,8 +1,5 @@
 from ui_interface import *
-import pandas as pd
-import matplotlib.pyplot as plt
-from matplotlib.figure import Figure
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
+from Graphs import Graphs
 
 import sys
 
@@ -13,6 +10,7 @@ class MainWindow(QMainWindow):
         # Calls the ui_interface.py file and makes that the main window
         # then hides the window title as well as set up the Ui widgets
         self.ui = Ui_MainWindow()
+        self.graph = Graphs()
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.ui.setupUi(self)
 
@@ -99,9 +97,17 @@ class MainWindow(QMainWindow):
     """
 
     def change_widget(self, index):
-        self.ui.stackedWidget.setCurrentIndex(index)
-        if self.ui.stackedWidget.currentIndex() == 0:
-            self.company_cloud_breaches_data()
+        widget = self.ui.stackedWidget
+        widget.setCurrentIndex(index)
+
+        if index == 0:
+            if widget.count() > 0:
+                widget.removeWidget(self.ui.stackedWidget.widget(0))
+
+            graph_widget = self.graph.company_cloud_breaches_data()
+            widget.insertWidget(0, graph_widget)
+            widget.setCurrentIndex(0)
+
         # Reset all the chart buttons to unchecked
         chart_buttons = [
             self.ui.company_cloud_breaches_button,
@@ -114,30 +120,6 @@ class MainWindow(QMainWindow):
         # goes through buttons in the list to set too false to change the index of the tab when clicked again
         for button in chart_buttons:
             button.setChecked(False)
-
-    def company_cloud_breaches_data(self):
-        company_data = pd.read_csv('CompanyData.csv')
-        bar_colors = ['tab:purple', 'tab:red', 'tab:blue', 'tab:pink', 'tab:green', 'tab:orange']
-
-        fig = Figure()
-        plot = fig.add_subplot(111)  # Ensure the plot uses a 111 subplot grid
-
-        plot.bar(company_data['Company Name'], company_data['Amount of Users Affected'],
-                 label=company_data['Company Name'],
-                 color=bar_colors)
-        plot.set_title('Major company cloud breaches')
-        plot.set_xlabel('Company Name')
-        plot.set_ylabel('Amount of Users Affected')
-        plot.legend()
-
-        # Create canvas and add to the stacked widget, 
-        # if widget count is higher than 0 remove old widget and insert new one
-        self.plot_canvas = FigureCanvas(fig)
-        if self.ui.stackedWidget.count() > 0:
-            self.ui.stackedWidget.removeWidget(self.ui.stackedWidget.widget(0))
-        self.ui.stackedWidget.insertWidget(0, self.plot_canvas)
-
-        self.ui.stackedWidget.setCurrentIndex(0)  # Ensure the widget is visible
 
 
 if __name__ == "__main__":
